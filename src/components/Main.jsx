@@ -137,7 +137,7 @@ const Main = () => {
               </div>
             </div>
           </div>
-          <div className="px-10 py-5  h-96 flex flex-col md:flex-row gap-10  flex-1 flex-wrap ">
+          <div className="px-10 py-5  h-96 flex  gap-10 flex-1  flex-wrap ">
             {secondData.map((data, i) => (
               <BottomCard data={data} key={i} />
             ))}
