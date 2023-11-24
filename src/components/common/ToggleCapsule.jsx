@@ -6,7 +6,7 @@ const ToggleCapsule = ({ state, setState }) => {
   };
 
   return (
-    <div className="border-2 border-black  w-64 rounded-full absolute bottom-0 right-16">
+    <div className="border-2 border-black  w-64 rounded-full absolute bottom-0 right-16 mb-2">
       <div className="flex justify-around p-1 cursor-pointer">
         <div
           className={`px-8 py-2 rounded-full text-center text-sm font-semibold ${

@@ -1,52 +1,43 @@
 import React from "react";
 import Button from "./Button";
-import { LuUser2 } from "react-icons/lu";
-import { IoMdCloudUpload } from "react-icons/io";
-import { MdOutlineEmail } from "react-icons/md";
 
-const BottomCard = () => {
+
+const BottomCard = ({ data }) => {
   return (
-    <>
-      <div className="w-3/6 h-96 ">
-        <div className="bg-white p-8 flex gap-3  shadow-xl rounded-lg ">
-          <div className="">
-            <h2 className="text-2xl font-[600]">Basic</h2>
-            <h4 className="custom-diagonal-line-through">89</h4>
-            <h1 className="text-2xl font-medium">
-              $ 9.99 <span className="text-base">/mon</span>
-            </h1>
-            <div>
-              <Button bgColor={`bg-red-500`} />
-            </div>
-          </div>
+    <div className="w-full xl:w-[48%]   ">
+      <div className="bg-white  p-8 flex flex-col md:flex-row justify-between  min-h-[100px]  shadow-xl rounded-lg ">
+        <div className="">
+          <p
+            className={`text-xs py-1 ${data.btnColour} px-2 rounded-3xl inline-block`}
+          >
+            {data.badge}
+          </p>
+
+          <h2 className="text-2xl font-[600] pt-2">{data.name}</h2>
+          <p className="text-xs leading-4 max-w-xs">{data.para}</p>
           <div>
-            <p className="font-medium text-sm tracking-tight">what you'll Get :</p>
-            <div className="flex items-center pl-4 pt-1 first-letter font-medium text-sm text-black">
-              <span className="mr-4">
-                <LuUser2 />
-              </span>
-              upto 25 users
-            </div>
-            <div className="flex items-center pl-4  font-medium text-sm text-black">
-              <span className="mr-4">
-                <IoMdCloudUpload />
-              </span>
-              upto 25gb storage
-            </div>
-            <div className="flex items-center pl-4  font-medium text-sm text-black">
-              <span className="mr-4">
-                <MdOutlineEmail />
-              </span>
-              email Support
-            </div>
-            <h2 className="pl-12 pt-3 font-semibold underline uppercase">
-              Explore Features
-            </h2>
+            <Button bgColor={`bg-yellow-500`} />
           </div>
         </div>
+        <div className="">
+          <p className="font-normal text-sm">what you'll Get :</p>
+          {data?.features.map((data, i) => (
+            <div
+              className="flex items-center pl-4  first-letter pt-4 font-medium text-sm text-black"
+              key={i}
+            >
+              <span className="mr-4">
+                {data.icon}
+              </span>
+             {data.label}
+            </div>
+          ))}
+
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 
 export default BottomCard;
+// w-full xl:w-[48%] sm:h-80 md:h-44 xl:44 h-96

@@ -5,19 +5,22 @@ import { FaAngleDown } from "react-icons/fa";
 
 const Navbar = () => {
   return (
-    <nav className="container h-28  flex items-center justify-between shadow-xl bg-[#C9E3F7] ">
-      <div className="px-20 h-full w-[16%] flex items-center gap-5 bg-white">
-        <img src={logo} alt="" width={50} height={50} />
-        <div className="seperater"></div>
+    <nav className="container h-28  flex flex-col md:flex-row items-center justify-between shadow-xl bg-[#C9E3F7] ">
+      <div className="px-4 sm:px-8 xl:px-16 h-full w-full sm:w-[16%] flex items-center justify-center md:justify-between sm:gap-2 bg-white overflow-hidden">
+        <img
+          src={logo}
+          alt="Company Logo"
+          className="h-14 w-14 sm:h-18 sm:w-12 object-contain mx-auto"
+        />
+         <div className="seperater hidden md:block ml-[51px]"></div>
       </div>
+
       <div className="flex gap-2 mr-10 ">
         <div className="py-2 px-4 bg-white shadow-xl rounded-md flex gap-2 items-center">
           <img
             src={logo2}
-            width={35}
-            height={35}
-            alt=""
-            className="rounded-full"
+            alt="image"
+            className="rounded-full w-9 h-9 object-contain"
           />
           <h4 className="text-base font-[500]"> xyz Enterprises pvt.Ltd</h4>
         </div>
