@@ -4,8 +4,8 @@ import Button from "./Button";
 
 const BottomCard = ({ data }) => {
   return (
-    <div className="w-full xl:w-[48%]   ">
-      <div className="bg-white  p-8 flex flex-col md:flex-row justify-between  min-h-[100px]  shadow-xl rounded-lg ">
+    <div className="w-full xl:w-[48%]  ">
+      <div className="bg-white  p-8 flex flex-col md:flex-row justify-between  md:h-64  shadow-xl rounded-lg ">
         <div className="">
           <p
             className={`text-xs py-1 ${data.btnColour} px-2 rounded-3xl inline-block`}

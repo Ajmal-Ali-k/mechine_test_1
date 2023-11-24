@@ -85,10 +85,10 @@ const secondData = [
         icon: <IoMdCloudUpload />,
         label: "up to 3gb  Storage",
       },
-      // {
-      //   icon: <MdOutlineEmail />,
-      //   label: "Email Support",
-      // },
+      {
+        icon: <MdOutlineEmail />,
+        label: "Email Support",
+      },
       {
         icon: <BiCheckDouble />,
         label: "Basics of Documents,Task Flow Voting",
